@@ -1,0 +1,379 @@
+\documentclass{article}
+
+\usepackage{TeachFormat}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage[version=4]{mhchem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[thinlines]{easytable}
+
+\title{UIL Physics Notes}
+\author{Aaron Zhou}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\maketitle
+
+{
+    \hypersetup{linkcolor=black}
+    \fontfamily{lmss}
+    \tableofcontents
+}
+
+\newpage
+\section{DC Circuits}
+
+We use the following notation for the section: 
+
+\vspace{15px}
+
+\begin{tcolorbox}
+\begin{multicols}{4}
+\begin{description}
+    \item $\emf$ = emf
+    \item $I$ = current
+    \item $P$ = power
+    \item $q$ = charge
+    \item $R$ = resistance
+    \item $\Delta V$ = voltage
+    \item $W$ = work
+\end{description}
+\end{multicols}
+\end{tcolorbox}
+
+\begin{textbox}{Author's Note}
+    For this section, we adopt the conventional current standard of circuits (i.e. positive carriers carry charge along a circuit). For equations that determine the direction of current, use discretion to determine the direction of current. 
+\end{textbox}
+
+\subsection{Introduction}
+\vspace{10px}
+We begin by defining the electromotive force, also denoted $\emf$. It is defined as the work per unit charge:
+\begin{equation}
+    \emf = W/q = dW/dq.
+\end{equation}
+It is important to note that the electromotive force is not an actual force; rather, it is a potential difference that causes charge to move. Thus, it is important to think of the electromotive force as something that \textit{motivates} charge to move rather than an actual force causing charge to move. 
+
+\subsection{Voltage Equations}
+
+Since the electromotive force can be converted into a voltage potential, to properly perform computations in DC circuits, we need to perform calculations based on voltage. Thus, we introduce the following theorems regarding voltage:
+
+\begin{thm}{Kirchoff's Loop Rule}
+    The sum of all differences in potential around a complete circuit loop must be zero.
+\end{thm}
+
+\begin{thm}{Kirchoff's Junction Rule}
+    The sum of the currents entering a junction is equal to the sum of the currents leaving the junction. 
+\end{thm}
+
+\begin{thm}{Voltage as a State Function}
+    Voltage is \textit{path-dependent}; that is, voltage difference between two points does not depend on the path that the voltage takes. 
+\end{thm}
+
+\vspace{10px}
+We also have one law that essentially acts as our bread and butter when it comes to working with DC circuits, Ohm's Law:
+
+\begin{eq}
+    \Delta V = IR. 
+\end{eq}
+
+\newpage
+Now, given that voltage is path-independent, we can combine Theorems \csecthm{2}, \csecthm{3}, and \cseceqn{5} to get the following important theorem for all DC circuits:
+
+\begin{thm}{Resistors in Series and Parallel}
+    Consider $n$ resistors with resistances $R_1, R_2, \dots, R_n$. If they are placed in a series, then the equivalent resistance is
+    \[R_{\textrm{eq}} = \sum_{n} R_n.\]
+    If they are placed in parallel, then the equivalent resistance satisfies 
+    \[\frac{1}{R_{\textrm{eq}}} = \sum_n \frac{1}{R_n}.\] 
+\end{thm}
+
+\newpage
+\section{Magnetism}
+We use the following notation for the section:
+
+\begin{tcolorbox}
+    \begin{multicols}{3}
+    \begin{description}
+        \item $\va{B}$ = magnetic field
+        \item $\va{F}_B$ = magnetic force
+        \item $q$ = charge
+        \item $\va{v}$ = velocity
+    \end{description}
+    \end{multicols}
+    \end{tcolorbox}
+
+\subsection{Introduction to Magnetism}
+
+The basic idea of magnetism is that unlike the electrostatic force, the magnetic force is a force exerted by and acting on moving electric charges. Unlike with the electric force, no basic magnetic particle exists, so everything about magnetics will be related to electric charges. We begin by defining the magnetic force:
+
+\begin{defi}{Magnetic Force}
+    $\va{F}_B = q\va{v} \times \va{B}.$
+\end{defi}
+Note that based on this definition, for a constant magnetic field, the force of magnetism will always be perpendicular to the velocity of a charge. Therefore, the force of magnetism from a constant magnetic field can not do work on a moving particle; as such, it can only change the direction and not the kinetic energy of a particle. The direction of the resulting vector can be evaluated using the right-hand rule:
+
+\begin{defi}{Right-Hand Rule}
+    When evaluating $\vb{a} \times \vb{b}$, the direction of the resulting vector can be determined by using one's right hand. By pointing the right index finger in the direction of $\vb{a}$ and the right middle finger in the direction of $\vb{b}$, the direction of the cross product $\vb{a} \times \vb{b}$ is given by the direction of the right thumb. In the case of the magnetic force, pointing the right index finger in the direction of the electric charge and pointing the right middle finger in the direction of the magnetic field will cause the thumb to give the direction of the magnetic force. 
+\end{defi}
+
+\newpage
+\section{Special Relativity}
+
+We use the following notation for the section: 
+
+\vspace{15px}
+
+\begin{tcolorbox}
+\begin{multicols}{3}
+\begin{description}
+    \item $c$ = speed of light
+    \item $E_0$ = rest energy
+    \item $E$ = total relativistic energy
+    \item $K$ = kinetic energy
+    \item $\lambda$ = Lorentz factor
+    \item $L$ = relativistic length
+    \item $L_0$ = nonrelativistic length
+    \item $m$ = mass
+    \item $\vec{p}$ = linear momentum
+    \item $t$ = relativistic time
+    \item $t_0$ = nonrelativistic time
+    \item $v$ = velocity
+\end{description}
+\end{multicols}
+\end{tcolorbox}
+
+\subsection{Introduction}
+
+Relativity is a modern physics idea that relates space and time together while considering objects with particularly large mass or particularly large speed. It is based off of two basic ideas:
+
+\begin{defi}{Basic Ideas of Relativity}
+    \begin{enumerate}
+        \item The laws of physics are invariant in all inertial frames of reference (that is, frames with no acceleration). 
+        \item The speed of light in vacuum is the same for all observers, regardless of the motion of light source or observer. 
+    \end{enumerate}
+\end{defi}
+
+\vspace{10px}
+From these basic ideas, we can derive the theory of relativity. We will begin with special relativity. 
+
+\subsection{Special Relativity Equations}
+
+Since relativity is inherently related to the speed of light, we need a way to determine how "close" something is to relativistic speeds, or the speed of light. This is the definition of the Lorentz factor:
+
+\begin{eq}
+    \lambda = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+\end{eq}
+
+It is important to note that many of our basic definitions of energy and time break down when moving at relativistic speeds. Thus, we must rederive many of our existing equations:
+
+\begin{eq}
+    E_0 = mc^2
+\end{eq}
+
+\begin{eq}
+    t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}} = \lambda t_0
+\end{eq}
+
+\begin{eq}
+    L = L_0\sqrt{1 - \frac{v^2}{c^2}} = \frac{L_0}{\lambda}
+\end{eq}
+
+\begin{eq}
+    K = (\lambda - 1)mc^2
+\end{eq}
+
+\begin{eq}
+    \vec{p} = \lambda mv
+\end{eq}
+
+\vspace{10px}
+We note a surprising discrepancy regarding energy within these equations: Theorem \cseceqn{3} and Theorem \cseceqn{6} seem to be two equations giving energy different values. In resolving this discrepancy, it is important to note that $E$ in Theorem \cseceqn{3} is known as the \textit{rest energy}; that is, the internal energy of a particle held by its mass when the particle is at rest, viewed from an inertial rest frame. Thus, to find the total energy of a particle, we must consider the total relativistic energy, defined below:
+
+\begin{eq}
+E = E_0 + K = \lambda mc^2.
+\end{eq}
+
+\newpage
+\section{Nuclear Physics}
+
+\subsection{Introduction}
+Most of our investigation of nuclear physics will arise from analyzing nuclear reactions: specifically, we care about what types of nuclear reactions can occur and how to classify them. We will begin by analyzing basic reaction types.
+
+\subsection{Introductory Reactions}
+
+There are two basic flavors of nuclear reactions that are important to know: the alpha decay and the beta decay. Alpha decay occurs at the emission of a Helium-4 nucleus from an atom, as seen in Equation \cseceqn{1}:
+
+\begin{eq}
+    \ce{^{238}U} \rightarrow \ce{^{234}Th} + \ce{^{4}He}. 
+\end{eq}
+
+In contrast, beta decay occurs at the conversion of a neutron to a proton or vice versa, resulting in the creation of an electron or a positron. Beta decay that creates an electron is called $\beta^-$ decay, while beta decay that creates a positron is called $\beta^+$ decay. The basic reaction for the former is shown in Equation \cseceqn{2}, while the basic reaction for the latter is shown in Equation \cseceqn{3}:
+
+\begin{eq}
+    \ce{n} \rightarrow \ce{p} + \ce{e-} + \bar v
+\end{eq}
+\begin{eq}
+    \ce{p} \rightarrow \ce{n} + \ce{e+} + v
+\end{eq}
+
+In both of these equations, either $\bar v$ or $v$ showed up as a result of the decay; we wil note that these are the antineutrino and neutrino, respectively. For now, we will not elaborate on the production of this neutrino further. 
+
+\newpage
+\subsection{The Four Fundamental Forces}
+
+Before we can go deeper into examining nuclear and particle reactions, we must first discuss the forces that mediate such interactions. These are the four fundamental forces, described below:
+
+\begin{defi}{Four Fundamental Forces}
+    The four fundamental forces are:
+    \begin{enumerate}
+        \item \textit{Gravity.} Gravity is the weakest out of the four fundamental forces; as such, on a particle by particle level, gravity will be negligible compared to the other three forces. Almost no particle interactions are mediated by the gravitational force. Reactions mediated by this take years. 
+        \item \textit{The weak force.} The weak force is responsible for beta decay and other processes involving fundamental particles. However, due to its low relative strength, it has a range of less than 1 fm and is significantly less powerful than the strong force. Reactions mediated by this take between $10^{-13}$ and $10^{-8}$ seconds.
+        \item \textit{The electromagnetic force.} The electromagnetic force is the interaction of charges within different particles. Interactions can occur due to the electromagnetic force, as it has an infinite range, and many common macroscopic forces such as drag and friction are the result of the electromagnetic force. The electromagnetic force is relatively strong enough to be critical in determining the structure and stability of nuclei. Reactions mediated by this take between $10^{-20}$ and $10^{-14}$ seconds. 
+        \item \textit{The strong force.} The strong force is responsible for the binding of nuclei, and is dominant in many of the reactions and decays between fundamental particles. However, its scope is limited both in that some particles can not feel its effects, and that it has a relatively short range of around 1 fm. Reactions mediated by this take around $10^{-23}$ seconds.
+    \end{enumerate}
+\end{defi}
+
+\subsection{Families of Particles}
+
+The final step we must perform before we can finally analyze particle reactions in full is to understand families of particles. Particles differ widely in their properties, so we must separate them into some general groups to allow for us to get some grasp on the mechanisms of nuclear reactions. 
+
+\vspace{10px}
+The first category of particles we analyze is the leptons. Leptons are characterized by all known leptons having a spin of $1/2$. Interesting, this entire group of particles can only interact through weak and electromagnetic interactions, as none of them are affected by the strong force. The complete list of leptons and their antiparticles can be seen in the below table:
+
+\begin{center}
+    \begin{tabular}{ |>{\centering\arraybackslash}m{12em}|>{\centering\arraybackslash}m{12em}| } 
+     \hline
+     Particle & Antiparticle \\ 
+     \hline
+     \ce{e-} & \ce{e+} \\ 
+     \hline
+     $v_\textrm{e}$ & $\bar v_\textrm{e}$ \\ 
+     \hline 
+     $\mu^-$ & $\mu^+$ \\ 
+     \hline 
+     $v_\mu$ & $\bar v_\mu$ \\ 
+     \hline 
+     $\tau^-$ & $\tau^+$ \\ 
+     \hline 
+     $v_\tau$ & $\bar v_\tau$ \\ 
+     \hline
+    \end{tabular}
+\end{center}
+
+Note that there are three charged particles paired with an uncharged neutrino. Although the electron is a stable particle, the meson and tau decay into other leptons:
+
+\begin{eq}
+    \mu \rightarrow \ce{e-} + \bar v_\textrm{e} + v_\mu
+\end{eq}
+\begin{eq}
+    \tau \rightarrow \mu^- + \bar v_\mu + v_\tau
+\end{eq}
+We should note that both of the above reactions must be mediated by the weak force, as any reaction involving neutrinos will be mediated by the weak interaction.
+
+\vspace{20px}
+
+The second family of particles we will analyze is the mesons. mesons are strongly interacting particles with integral spin. The most common examples of mesons are the pion and Kaon, which are denoted $\pi$ and K, respectively. Generally, mesons are produced in reactions mediated by the strong interaction and will decay into other mesons and leptons in reactions mediated through the strong, electromagnetic, or weak interaction. meson production can be seen in Equation \cseceqn{7}, while meson decay can be seen mediated by the weak interaction and electromagnetic interaction, respectively, in Equations \cseceqn{8} and \cseceqn{9}. 
+
+\begin{eq}
+    \ce{p} + \ce{n} \rightarrow \ce{p} + \ce{p} + \pi^-
+\end{eq}
+
+\begin{eq}
+    \pi^- \rightarrow \mu^- + \bar v_\mu 
+\end{eq}
+
+\begin{eq}
+    \pi^0 \rightarrow \gamma + \gamma
+\end{eq}
+
+\vspace{20px}
+The third class of particles that we will analyze are the baryons. Baryons have half-integral spins. Notable examples of baryons are the proton and neutron. Baryons will have distinct antiparticles; for example, the antiproton $(\bar p)$ and the antineutron $(\bar n)$. Interactions between nucleons (protons and neutrons) can produce heavier baryons, such as the reaction shown in Equation \cseceqn{10}:
+
+\begin{eq}
+    \ce{p} + \ce{p} \rightarrow \ce{p} + \Lambda^0 + \ce{K+}
+\end{eq}
+
+In the above equation, $\Lambda^0$ is the desired heavy baryon. 
+
+\vspace*{10px}
+The final class of particles we will analyze are the field particles, also known as the exchange particles. These particles essentially act as the mediators for the forces that govern each reaction; these particles establish the fields the forces are generated from. Each force has its characteristic field particles: the weak bosons, $W^+, W^- Z^0$, mediate the weak force, while the photon $\gamma$, mediates the electromagnetic force, and the gluon $\ce{g}$, mediates the strong force. The presence of any of these particles determines the type of interaction a reaction is mediated by, which can provide useful information regarding what can and can not occur. 
+
+\vspace*{10px}
+We also note that field particles have a slight contradiction to them: Each of the particles are emitted by the reactants in a nuclear reaction to form the force, yet each of the particles also has a nonzero mass, so how can conservation of mass be satisfied? This comes down to the idea of uncertainty: essentially, if we measure the energy of a reaction over some given time interval $\Delta t$, we are met with a corresponding uncertainty in the energy of reaction by the Heisenberg Uncertainty Principle, shown in  Equation \cseceqn{11}:
+
+\begin{eq}
+    \Delta E = \frac{h}{2\pi \Delta t}.
+\end{eq}
+
+Thus, if we measure for a small enough interval of time, we are able to neglect the energy loss from the emission of a field particle due to uncertainty. Interestingly, this is what defines the range of each of the fundamental forces; because we can only observe a reaction for a given amount of time, a field particle will only be able to move a finite distance during the course of the reaction, so the reaction has a maximum range. 
+
+\newpage
+
+\subsection{Conservation within Reactions}
+
+With the fundamentals of nuclear physics established, we are finally able to describe which nuclear reactions are possible to occur:
+
+\begin{thm}{Reaction Mechanisms}
+    In any particle or nuclear reaction, the following three properties must be satisfied:
+
+    \begin{enumerate}
+        \item \textit{Conservation of Momentum:} If a single particle is decaying, then it must decay into at least two other particles. 
+        \item \textit{Conservation of Charge:} The total charge of the reactants must equal the total charge of the products.
+        \item \textit{Conservation of Baryon Count}: The baryon counts in the reactants and products must be the same. 
+        \item \textit{Conservation of Lepton Count}: The three lepton counts in the reactants and products must be the same. 
+        \item \textit{Conservation of Strangeness}: In any reaction mediated by the electromagnetic or strong interactions, total strangeness must be conserved between products and reactants. In any reaction mediated by the weak interaction, strangeness is allowed to change by at most 1 between products and reactants.
+        \item \textit{Conservation of Angular Momentum:} Spin must be conserved between the products and reactants. 
+    \end{enumerate}
+\end{thm}
+
+\vspace*{10px}
+Points 1-3 of Theorem \csecthm{12} are clearly explanatory\footnote{We should note that the baryon count is decreased by baryon antiparticles; the theorem is slightly deceiving in that regard.}; we will focus on Points 4-6. We will begin with strangeness. The \textit{strangeness} of a particle is a property of that particle that determines its behavior within different particle reactions. Unfortunately, unlike baryon or lepton count, the strangeness of a particle is something intrinsic to each particle. We will provide some of the most common particles and their strangenesses in a later table. 
+
+\vspace{10px}
+We now look at the idea of lepton count in Theorem \csecthm{12}. The point references three lepton numbers. These are $L_e$, $L_\mu$, and $L_\tau$, which count the number of leptons of each of the three flavors of lepton. \textbf{Each} of these must be conserved (e.g. a $\mu$ lepton can not be converted to a $\tau$ lepton). We note that importantly, lepton count is \textit{decreased} by their antiparticles; thus, $\bar v_e$ contributes $-1$ to the $L_e$ lepton count.
+
+\vspace{10px}
+Finally, the last element of particle reactions is up to the idea of angular momentum and spin. We know that angular momentum is conserved in a nuclear reaction, which means that the intrinsic property of spin must be conserved as well. However, this is all we will say on the matter, as actual spin calculations seen to be out of the scope of a typical high school course. 
+
+\newpage
+\subsection{Quarks}
+
+On top of our discussion of nuclear particle reactions, we must discuss the interactions between particles even more fundamental than the baryons and mesons: the quarks. The quarks are fundamental particles that come in 6 "flavors": up (u), down (d), strange (s), charm (c), top (t), and bottom (b).
+
+The key properties of the six quarks are shown in the below table:\footnote{TODO: I should probably redo this table using the easytable package. }
+
+\begin{center}
+    \begin{tabular}{ >{\centering\arraybackslash}m{6em} >{\centering\arraybackslash}m{6em} >{\centering\arraybackslash}m{6em} >{\centering\arraybackslash}m{6em} >{\centering\arraybackslash}m{6em} } 
+     Quark & Charge & Spin & Baryon Number & Strangeness \\ 
+     \hline
+     Up (u) & 2/3 & 1/2 & 1/3 & 0 \\ 
+     Down (d) & -1/3 & 1/2 & 1/3 & 0 \\
+     Charm (c) & 2/3 & 1/2 & 1/3 & 0 \\ 
+     Strange (s) & -1/3 & 1/2 & 1/3 & -1 \\ 
+     Top (t) & 2/3 & 1/2 & 1/3 & 0 \\ 
+     Bottom (b) & -1/3 & 1/2 & 1/3 & 0 \\ 
+    \end{tabular}
+\end{center}
+
+\vspace*{10px}
+Quarks are found in baryons and mesons, where they serve as the fundamental particles that make baryons and mesons. In fact, the properties of many baryons and mesons are determined by the quark configuration, as simply adding up the values for the spin, baryon number, and charge of the constituent quarks for any given particle will result in the spin, baryon number, and charge of the particle itself. (In this vein, it is important to note that each quark has an antiquark with opposing charge and baryon number, which is how mesons have a baryon number of 0.) The quark configurations of several important particles are shown below, from which this property can be verified. 
+
+\vspace*{10px}
+
+\begin{center}
+    \begin{TAB}(r, .3cm, .5cm)[5pt, 12cm, 0cm]{|c|c|}{|c|c|c|c|c|c|c|}
+     Particle & Quark Configuration \\ 
+     p & uud \\
+     n & udd \\
+     $\pi^+$ & $u\bar d$ \\
+     $\pi^0$ & $\bar u u $, $\bar d d$ \\
+     $\ce{K^0}$ & $d\bar s$ \\ 
+     $\ce{K^-}$ & $\bar u s$ \\
+    \end{TAB}
+\end{center}
+
+\vspace*{10px}
+
+In nuclear reactions, the number of each flavor of quark is conserved \textit{if the reaction is mediated by the electromagnetic or strong forces}. This in fact gives us a method to identify reactions mediated by the weak interaction; if a nuclear reaction has a flavor change in one of its quarks between products and reactants, then it must be mediated by the weak interaction. (Note that neither the converse nor the inverse of this statement are necessarily true.) We will call such reactions \textit{flavor-changing reactions.}
+\end{document}
