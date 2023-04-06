@@ -92,29 +92,6 @@ Now, given that voltage is path-independent, we can combine Theorems \csecthm{2}
 \newpage
 \section{Special Relativity}
 
-We use the following notation for the section: 
-
-\vspace{15px}
-
-\begin{tcolorbox}
-\begin{multicols}{3}
-\begin{description}
-    \item $c$ = speed of light
-    \item $E_0$ = rest energy
-    \item $E$ = total relativistic energy
-    \item $K$ = kinetic energy
-    \item $\lambda$ = Lorentz factor
-    \item $L$ = relativistic length
-    \item $L_0$ = nonrelativistic length
-    \item $m$ = mass
-    \item $\vec{p}$ = linear momentum
-    \item $t$ = relativistic time
-    \item $t_0$ = nonrelativistic time
-    \item $v$ = velocity
-\end{description}
-\end{multicols}
-\end{tcolorbox}
-
 \subsection{Introduction}
 
 Relativity is a modern physics idea that relates space and time together while considering objects with particularly large mass or particularly large speed. It is based off of two basic ideas:
@@ -137,34 +114,36 @@ Since relativity is inherently related to the speed of light, we need a way to d
     \lambda = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
 \end{eq}
 
-It is important to note that many of our basic definitions of energy and time break down when moving at relativistic speeds. Thus, we must rederive many of our existing equations:
+Notice that we always have the Lorentz factor greater than or equal to 1. It is important to note that many of our basic definitions of energy and time break down when moving at relativistic speeds. Thus, we must rederive many of our existing equations. First, we have the most famous two effects in special relativity: length contraction and time dilation. At relativistic speeds\footnote{The term \textit{relativistic speeds} will denote any speed in which the effects of special relativity are substantial; generally, this will be at velocities $v > c/10$; however, the equations can be applied to any situation where the effect s of special relativity must be considered.}, distances seem to contract in the direction of the movement of the observer's reference frame, while time seems to dilate during movement. Both length contraction and time dilation are scaled by the Lorentz factor, resulting in the two relations 
+\begin{eq}
+    L = \frac{L_0}{\lambda}
+\end{eq}
+\begin{eq}
+    t = t_0\lambda. 
+\end{eq}
+
+Momentum follows a similar effect at relativistic speeds, similarly scaling by the Lorentz factor:
+
+\begin{eq}
+    p = \lambda mv. 
+\end{eq}
+
+We now consider the energy of a particle moving at relativistic speeds. There are two types of energy to consider: the rest energy of a particle and its kinetic energy. The rest energy of a particle is the energy the particle contains within its mass while not moving, while the kinetic energy of a particle is the energy it gains from its movement. The equations for these two values are given respectively by:
 
 \begin{eq}
     E_0 = mc^2
 \end{eq}
-
 \begin{eq}
-    t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}} = \lambda t_0
+    K = (\lambda - 1)mc^2.
 \end{eq}
 
-\begin{eq}
-    L = L_0\sqrt{1 - \frac{v^2}{c^2}} = \frac{L_0}{\lambda}
-\end{eq}
-
-\begin{eq}
-    K = (\lambda - 1)mc^2
-\end{eq}
-
-\begin{eq}
-    \vec{p} = \lambda mv
-\end{eq}
-
-\vspace{10px}
-We note a surprising discrepancy regarding energy within these equations: Theorem \cseceqn{3} and Theorem \cseceqn{6} seem to be two equations giving energy different values. In resolving this discrepancy, it is important to note that $E$ in Theorem \cseceqn{3} is known as the \textit{rest energy}; that is, the internal energy of a particle held by its mass when the particle is at rest, viewed from an inertial rest frame. Thus, to find the total energy of a particle, we must consider the total relativistic energy, defined below:
+Now, we can combine Equations \cseceqn{5} and \cseceqn{6} by summing the two equations together to get the total energy of the particle:
 
 \begin{eq}
 E = E_0 + K = \lambda mc^2.
 \end{eq}
+
+Given each of the above relativistic equations, it should now be possible for each of the quantities from classical mechanics to be rederived in terms of special relativity\footnote{Many of these derivations do require calculus (e.g. the derivation of force requires the derivative of relativistic linear momentum with respect to time), so we advise caution in blatantly applying classical mechanics to special relativity.}. We will leave these derivations as an exercise to the reader. 
 
 \newpage
 \section{Nuclear Physics}
