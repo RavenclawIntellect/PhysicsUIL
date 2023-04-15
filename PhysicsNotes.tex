@@ -341,6 +341,12 @@ We begin by focusing on the voltage producing element. We define the \textit{pea
 \begin{eq}
     V_{\textrm{rms}} = \frac{V_0}{\sqrt{2}}.
 \end{eq}
+
+We note that the root mean voltage can be calculated for a continuous waveform as well. Let one of the periods of the voltage be $t_1 \leq t \leq t_2$. Then, the rms voltage can be calculated as 
+\begin{eq}
+    V_{\textrm{rms}} = \sqrt{\frac{1}{t_2 - t_1}\int_{t_1}^{t_2} V(t)^2 \ dt}.
+\end{eq}
+
 We note that we can define current similarly as well. Using the same definition of peak current and rms current, we can relate the two values by the equation 
 \begin{eq}
     I_{\textrm{rms}} = \frac{I_0}{\sqrt{2}}. 
@@ -409,6 +415,6 @@ where $Z$ is the impedance of the circuit. The impedance $Z$ can be defined by
     Z = \sqrt{R^2 + (X_L - X_C)^2}.
 \end{eq}
 
-Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{4}, \cseceqn{8}, and \cseceqn{11} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an LRC circuit.
+Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{5}, \cseceqn{9}, and \cseceqn{12} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an LRC circuit.
 
 \end{document}
