@@ -327,4 +327,88 @@ Quarks are found in baryons and mesons, where they serve as the fundamental part
 \vspace*{10px}
 
 In nuclear reactions, the number of each flavor of quark is conserved \textit{if the reaction is mediated by the electromagnetic or strong forces}. This in fact gives us a method to identify reactions mediated by the weak interaction; if a nuclear reaction has a flavor change in one of its quarks between products and reactants, then it must be mediated by the weak interaction. (Note that neither the converse nor the inverse of this statement are necessarily true.) We will call such reactions \textit{flavor-changing reactions.}
+
+\newpage
+\section{AC Circuits}
+
+\subsection{Introduction}
+
+In this section, we introduce the concept of alternating current. In circuits with alternating current, the voltage-providing element does not provide a constant voltage, but rather a voltage that varies sinusoidally. We will investigate some of the properties of such circuits in this section. 
+
+\subsection{Voltage Producing Elements}
+
+We begin by focusing on the voltage producing element. We define the \textit{peak voltage} of the circuit as the maximum voltage produced by the voltage producer. We also define the \textit{rms voltage} of the circuit, which is the average voltage of the circuit (computed by essentially taking a quadratic mean). The peak voltage and the rms voltage are related by the equation 
+\begin{eq}
+    V_{\textrm{rms}} = \frac{V_0}{\sqrt{2}}.
+\end{eq}
+We note that we can define current similarly as well. Using the same definition of peak current and rms current, we can relate the two values by the equation 
+\begin{eq}
+    I_{\textrm{rms}} = \frac{I_0}{\sqrt{2}}. 
+\end{eq}
+In an AC circuit, we can assume that the voltage produced gives rise to a current 
+\begin{eq}
+    I = I_0\cos 2\pi ft,
+\end{eq}
+where $f$ is the frequency of the sinusoidal voltage and $t$ is the time elapsed.
+
+\subsection{Circuit Elements}
+
+We now need to consider what occurs when our source of alternating voltage is placed with other circuit elements. We will begin with resistors. Since resistors have a constant resistance, we can use Ohm's law to derive the voltage across the resistor:
+\begin{eq}
+    V = IR = I_0\cos 2\pi ft. 
+\end{eq}
+
+As a result, we can say that a resistor is \textit{in phase} with the voltage-producing element, as the graphs of the current and the voltage across the resistor have the same shift at any given time. Additionally, because of this, the power equations for resistors can hold up if we consider the average power dissipated and the rms current and voltages:
+\begin{eq}
+    \bar P = I_{\textrm{rms}}^2R = \frac{V_\textrm{rms}^2}{R}. 
+\end{eq}
+
+We now consider inductors within AC circuits. We recall that the counter-emf produced by an inductor has value 
+\begin{eq}
+    V = L\frac{dI}{dt}. 
+\end{eq}
+
+\vspace{10px}
+By applying the differential, we can derive the equation across an inductor to be 
+\begin{eq}
+    V = -V_0\sin 2\pi ft.
+\end{eq}
+
+As we see above, we see that since the voltage and current are governed by sine and cosine waves, respectively, the current lags behind the voltage by $90\dg$ in an inductor. We note that since an inductor impedes the flow of charge similarly to a resistor, we can use an equation similar to that of a resistor. However, since peak voltage and peak current are not reached at the same time, \textbf{such an equation can only be used for rms or peak voltages and currents.} This equation is the reactance equation, where we have 
+\begin{eq}
+    V = IX_L,
+\end{eq}
+where $X_L$ is defined as the \textit{inductive reactance} of the circuit. The inductive reactance of a circuit can be found using 
+\begin{eq}
+    X_L = \omega L = 2\pi fL.
+\end{eq}
+We note that in circuits containing inductors along with other circuit elements, the reactance equation should be used carefully: specifically, because the inductor is no longer the only component impeding voltage within the circuit, the reactance equation should only be used when the reactance is large compared to any other resistance. 
+
+\vspace*{10px}
+We now finish the section on circuit elements with considerations regarding capacitors. Using the fact that in a capacitor, $V = Q/C$ and that the capacitor acts like an open switch when it has charge and a wire when it does not, we can derive the fact that when a capacitor has charge, it has a high voltage and a low current. Thus, we can state that current leads voltage by  $90\dg$ in a capacitor. Equivalently, in an AC circuit with only a capacitor, we write 
+\begin{eq}
+    V = V_0\sin 2\pi ft. 
+\end{eq}
+
+We can also derive a capacitive reactance equation, where we have 
+\begin{eq}
+    V = IX_C,
+\end{eq}
+where $V$ and $I$ are only defined at rms or peak values and the reactance $X_C$ is defined by 
+\begin{eq}
+    X_C = \frac{1}{\omega C} = \frac{1}{2\pi fC}.
+\end{eq}
+
+\vspace*{10px}
+We can define the impedance of a circuit. Impedance affects LRC circuits. Essentially, it is a way of calculating the peak or rms voltage and currents across the circuit. Thus, for rms or peak voltages and currents, we have 
+\begin{eq}
+    V = IZ,
+\end{eq}
+where $Z$ is the impedance of the circuit. The impedance $Z$ can be defined by 
+\begin{eq}
+    Z = \sqrt{R^2 + (X_L - X_C)^2}.
+\end{eq}
+
+Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{4}, \cseceqn{8}, and \cseceqn{11} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an LRC circuit.
+
 \end{document}
