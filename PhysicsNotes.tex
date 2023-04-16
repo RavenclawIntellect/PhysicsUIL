@@ -506,4 +506,43 @@ Of course, we must again establish sign conventions for such a refracting surfac
     \end{enumerate}
 \end{thm}
 
+\subsection{The Wave Nature of Light}
+
+The fact that light acts both as a particle and as a wave gives it quite a few interesting properties we will explore here. We will begin with diffraction. 
+
+\vspace{10px}
+We begin by analyzing diffraction from the point of view of the double slit experiment. The famous Young's double slit experiment deduced that light acted as a wave by showing that light passing through a screen with two slits formed not a pattern of two slits, but a pattern of multiple slits. The pattern of slits over the screen was found to be a result of interference, where the places where light appeared were where constructive interference occurred, and the places where light was absent was where destructive interference occurred. We won't go too much into this mechanism for now, but we will note the two equations we have for calculating this behavior. We note that constructive interference occurs when 
+\begin{eq}
+    d\sin \theta = m\lambda,
+\end{eq}
+where $d$ is the distance between the slits, $\theta$ is the angle the rays of light must make with the horizontal, $m$ is an integer known as the order of the fringe, and $\lambda$ is the wavelength of light. Similarly, destructive interference occurs when 
+\begin{eq}
+    d\sin \theta = \left(m + \frac{1}{2}\right)\lambda. 
+\end{eq}
+
+\vspace{10px}
+Next, we can investigate the properties of light passing through a single slit. Due to interference and diffraction (the reasons of which we won't clearly investigate), we again have multiple maxima and minima formed when light passes through a single slit. We note that the behavior is slightly different: the maxima of light occur at the values 
+\begin{eq}
+    D\sin \theta = m\lambda, \hspace*{15px}m = 0, \frac{3}{2}, \frac{5}{2}, \dots. 
+\end{eq} 
+Here, $D$ represents the width of the slit, and $\theta$ and $\lambda$ represent the same quantities they do in the double slit experiment. It is important to note that for a single slit, the maxima at $m = 0$ is significantly larger than any of the other maxima. Similarly, the minima of light occur at the values 
+\begin{eq}
+    D\sin \theta = m\lambda, \hspace*{15px}m = 1, 2, 3,\dots. 
+\end{eq}
+
+\vspace{10px}
+We can now explore the extension of both the double and single slit versions of light diffraction: the interaction of light with a very large number of slits. Such a device is called a diffraction grating. Luckily for us, a diffraction grating produces the same minima and maxima as a double slit, described by equations \cseceqn{10} and \cseceqn{11}. However, there is an important difference between the double slit and the diffraction grating: the diffraction grating produces much sharper results. Since in the double slit version of the diffraction grating, there are only 2 light waves to perform interference with one another, the light spreads out across the maxima and minima. However, in a diffraction grating, any small disturbance will cause 100s of waves to be out of phase, causing much strong interference. Therefore, as a result, diffraction gratings have very strong maxima and are very weak elsewhere. 
+
+\vspace*{20px}
+We now turn our attention away from diffraction and now consider thin-film interference. Consider two surfaces, with the top surface being able to transmit light and having a differing index of refraction than the bottom surface. Upon light hitting the top surface, there are two possibilities for what occurs: either the light gets reflected off the top surface, or the light gets transmitted through the top surface and reflected off the bottom surface. This creates a path difference in the distance the light must travel, which causes a phase shift that leads to constructive and destructive interference. In order to correctly account for thin film interference, we must consider the following three rules:
+
+\begin{thm}{Thin-Film Interference Rules}
+    \begin{enumerate}
+        \item The wavelength of a wave in a medium with index of refraction $n$ is $\lambda_n = \lambda / n$. 
+        \item Constructive interference occurs when the path difference is an integer multiple of $\lambda_n$. 
+        \item Destructive interference occurs when the path difference is a half-integer multiple of $\lambda_n$. 
+        \item If a light wave in a medium with index of refraction $n_1$ reflects off a surface in a medium with index of refraction $n_2$, if $n_2 > n_1$, then a $180\dg$ phase change occurs. This is equivalent to adding $\frac{1}{2}\lambda_n$ for the path difference. 
+    \end{enumerate}
+\end{thm}
+
 \end{document}
