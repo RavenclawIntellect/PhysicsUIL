@@ -417,4 +417,93 @@ where $Z$ is the impedance of the circuit. The impedance $Z$ can be defined by
 
 Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{5}, \cseceqn{9}, and \cseceqn{12} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an LRC circuit.
 
+\vspace*{10px}
+It is important to note that there are also two other times that a circuit involving resistors, capacitors, and inductors can be analyzed: at $t = 0$ and at $t = \infty$. At $t = 0$, since capacitors have no charge, they act as wires; similarly, inductors will act as open switches. At $t = \infty$, also known as steady-state, capacitors gaining charge will act as open switches while inductors will act as wires, unable to further produce a counter-emf. However, it is notable that such a modification will only occur in DC circuits, but we add it here due to this being the only discussion location for all three circuit elements. 
+
+\newpage
+
+\section{Light}
+
+\subsection{Introduction}
+
+This section will serve as a basis for all interactions involving light: its bending through lenses and mirrors, diffraction, refraction, etc. This will be more of a formula disposal location rather than an in depth explanation, however. 
+
+\subsection{Lenses and Mirrors}
+
+We will begin with the basis of much of optics: the interaction of light with lenses and mirrors. We will begin by focusing on a spherical mirror. A spherical mirror is defined by a center of curvature and a radius. When incident parallel rays interact with a mirror, they will all reach \textit{approximately}\footnote{The rays do not actually meet at the same focal point. The more curved a mirror is, the more spread out the points of contact of the rays of light will be. This effect is called spherical aberration.} the same point. This point is known as the focal point. The focal point sits at the midpoint of the center of curvature and the mirror, as denoted by the equation
+\begin{eq}
+    f = \frac{r}{2}.
+\end{eq}
+
+We note that the equation above does neglect the sign of the focal length; we will correct this when we get to an equation that requires it. 
+
+\vspace*{10px}
+When considering the effect a mirror has on light, we care about two different things: the height of the image $h_i$, and the distance from the mirror the image appears to be $d_i$. First, due to similar triangles, we have the simple equation\footnote{This equation lacks appropriate signs; the absolute values of both quantities should be equal.}
+\begin{eq}
+    \frac{h_o}{h_i} = \frac{d_o}{d_i}.
+\end{eq}
+
+Then, we can do some derivations with ray tracing (which we will not show here) to derive the all-important \textbf{mirror equation:}
+\begin{eq}
+    \frac{1}{d_i} + \frac{1}{d_o} = \frac{1}{f}.
+\end{eq}
+
+The mirror equation tends to be quite important, as it is the primary way the properties of an image can be deduced from only information about the original object and mirror. However, the mirror equation introduces an important issue: signs. Sign conventions are required for all lens and mirror applications, as handling each of the cases can be cumbersome without them. Thus, we establish the following sign conventions for mirrors:
+
+\begin{thm}{Sign Conventions for Mirrors}
+    \begin{enumerate}
+        \item Let the object that is being reflected sit on the \textit{reflecting side of the mirror}. The distance from an object to a mirror is positive if the object is on the reflecting side of the mirror, and negative otherwise. Note that this also applies to the center of curvature, allowing the focal length to be negative. 
+        \item The image height of an object is positive if the object is upright, and negative otherwise. Assume that the height of the original object is always positive. 
+    \end{enumerate}
+\end{thm}
+
+After the mirror equation, we have one more piece of information we can extract about the mirror, also known as its magnification. The magnification of a mirror is a direct value of how much a mirror has enlarged and shrunk an object, defined by the signed equation 
+\begin{eq}
+    m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}.
+\end{eq}
+
+\vspace{10px}
+With all of these tools, we can mostly describe the properties of an image produced by a mirror. We will introduce one last distinction: the difference between the real and virtual images produced by a mirror. Real images are actual points in which light rays converge, while virtual images are points in which the light rays diverge. For mirrors, real images occur when the image lies on the reflecting side of the mirror, while virtual images occur when the image lies on the nonreflecting side of the mirror.
+
+\vspace*{10px}
+We now move on to lenses. Lenses refract light to cause it to change direction as it passes through the lens. There are two primary types of lens: a converging lens, whose walls curve outwards, and a diverging lens, whose walls curve inwards. Luckily for us, equations \cseceqn{2}, \cseceqn{3}, and \cseceqn{5} all still hold true for lenses as they do for mirrors. However, due to the dual walls of the lens and its ability to refract, not reflect, we must change our sign conventions:
+
+\begin{thm}{Sign Conventions for Lenses}
+    \begin{enumerate}
+        \item The focal length is positive for converging lens and negative for diverging lens.
+        \item The object distance is positive if the object is on the side of the lens from which the light is coming; otherwise, it is negative. The object distance can only be negative if multiple lenses are used in combination.
+        \item The image distance is positive if the image is on the opposite side of the lens from where the light is coming; if it is on the same side, the distance is negative. 
+        \item The height of the image is positive if the image is upright and negative otherwise. The object height is always taken to be positive.
+    \end{enumerate}
+\end{thm}
+
+\vspace{10px}
+We now handle real and virtual images. For lenses, we state that the image of the lens is real if it is on the opposite side of the lens from the object and virtual otherwise. 
+
+\vspace*{10px}
+We now focus on one final piece of information with respect to lenses: the lensmaker's equation. The lensmaker's equation relates the focal length of a lens to the way and materials it was constructed from. In order to use the lensmaker's equation, we first must describe the construction of a lens. Typically, a thin lens can be described by 2 radii of curvature. We say that one side of the lens is convex if it arches outwards and concave if it arches inwards. (Whether a side arches outwards or inwards can be determined by imagining light passing through the lens.) For the lensmaker's equation, we have the sign convention of describing the radius of curvature as positive if the lens is convex and negative if the lens side is concave. Thus, we can now employ the formula
+
+\begin{eq}
+    \frac{1}{f} = (n - 1)\left(\frac{1}{R_1} + \frac{1}{R_2}\right),
+\end{eq}
+
+where $n$ is the index of refraction of the material the lens is made of. 
+
+\vspace{10px}
+We also have one more type of object used to manipulate the direction and movement of light: spherical refracting surfaces. We define spherical refracting surfaces by a radius of curvature $r$. For spherical refracting surfaces, we care only about the location where the object is and the location where the image appears. The equation for such devices are defined by the index of refraction of the medium containing the incident light $n_1$\footnote{It is important to note here that it is commonly used that incident or refracted light comes from air, which has an index of refraction of 1. Additionally, water has an index of refraction of 1.33.}, the index of refraction of the medium containing the refracted light $n_2$, and the distances of the object and its image from the refracting surface $o$ and $i$:
+
+\begin{eq}
+    \frac{n_1}{o} + \frac{n_2}{i} = \frac{n_2 - n_1}{r}.
+\end{eq}
+
+Of course, we must again establish sign conventions for such a refracting surface. We discuss this in the language of real and virtual images:
+
+\begin{thm}{Sign Conventions for Spherical Refracting Surfaces}
+    \begin{enumerate}
+        \item We define the medium containing incident light as the $V$-side and the medium containing refracted light the $R$-side.  (This is how whether an image is real or virtual is defined.)
+        \item If the center of curvature lies on the $R$-side, we call the radius of curvature positive; otherwise, we call the radius of curvature negative. 
+        \item Object distances are positive if they are on the $V$-side. Image distances are positive if they are on the $R$-side. 
+    \end{enumerate}
+\end{thm}
+
 \end{document}
