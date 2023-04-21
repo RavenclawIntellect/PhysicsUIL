@@ -416,7 +416,16 @@ where $Z$ is the impedance of the circuit. The impedance $Z$ can be defined by
     Z = \sqrt{R^2 + (X_L - X_C)^2}.
 \end{eq}
 
-Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{5}, \cseceqn{9}, and \cseceqn{12} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an LRC circuit.
+Notably, the impedance of a circuit is incredibly helpful, as it allows us to find the peak or rms current. This can all be combined using the three equations \cseceqn{5}, \cseceqn{9}, and \cseceqn{12} to find the individual voltages across each of the inductor, capacitor, and resistor. This creates a good way of finishing an RLC circuit.
+
+\vspace*{10px}
+
+One last topic of discussion for RLC circuits is the idea of a phase shift. As we noted in the previous sections, capacitors and inductors cause current and voltage to lead and fall behind each other. In a combined circuit, we need a metric to compute the sum total of these effects. This is the phase shift angle, which has formula 
+\begin{eq}
+    \phi = \arctan\left(\frac{X_L - X_C}{R}\right).
+\end{eq}
+
+If the phase shift is positive, we say that the current lags behind the voltage, while if the phase shift is negative, we say that the current leads the voltage. 
 
 \vspace*{10px}
 It is important to note that there are also two other times that a circuit involving resistors, capacitors, and inductors can be analyzed: at $t = 0$ and at $t = \infty$. At $t = 0$, since capacitors have no charge, they act as wires; similarly, inductors will act as open switches. At $t = \infty$, also known as steady-state, capacitors gaining charge will act as open switches while inductors will act as wires, unable to further produce a counter-emf. However, it is notable that such a modification will only occur in DC circuits, but we add it here due to this being the only discussion location for all three circuit elements. 
